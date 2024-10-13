@@ -19,3 +19,5 @@ func main() {
 	fmt.Scan(&n)
 	cetakDeret(n)
 }
+
+// Zahrina Antika Malahati_2311102109
