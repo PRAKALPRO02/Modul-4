@@ -1,26 +1,27 @@
-// package main
+package main
 
-// import "fmt"
+import "fmt"
 
-// func main() {
-// 	var a, b int
-// 	fmt.Scan(&a, &b)
-// 	if a >= b {
-// 		fmt.Print(permutasi(a, b))
-// 	} else {
-// 		fmt.Print(permutasi(b, a))
-// 	}
+// Fungsi untuk menghitung faktorial
+func factorial(n int) int {
+	if n == 0 {
+		return 1
+	}
+	result := 1
+	for i := 1; i <= n; i++ {
+		result *= i
+	}
+	return result
+}
 
-// }
-// func faktorial(n int) int {
-// 	var hasil int = 1
-// 	var i int
-// 	for i = 1; i <= n; i++ {
-// 		hasil = hasil * i
-// 	}
-// 	return hasil
-// }
+// Prosedur untuk menghitung dan menampilkan permutasi
+func permutasi(n, r int) {
+	hasilPermutasi := factorial(n) / factorial(n-r)
+	fmt.Printf("Permutasi dari %dP%d adalah: %d\n", n, r, hasilPermutasi)
+}
 
-// func permutasi(n, r int) int {
-// 	return faktorial(n) / faktorial(n-r)
-// }
+func main() {
+	// Memanggil prosedur untuk menghitung dan menampilkan permutasi
+	n, r := 5, 3
+	permutasi(n, r)
+}
